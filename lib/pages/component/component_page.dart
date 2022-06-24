@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_demo/pages/tabbar_with_pageview.dart';
 
 class ComponentPageWidget extends StatefulWidget {
   const ComponentPageWidget({Key? key}) : super(key: key);
@@ -9,36 +10,35 @@ class ComponentPageWidget extends StatefulWidget {
 }
 
 class _ComponentPageWidgetState extends State<ComponentPageWidget> {
-  String _counter = "";
-
   @override
   void initState() {
     super.initState();
-    debugPrint("ComponentPageWidgetState");
-  }
-
-  void _updateRep(String res) {
-    setState(() {
-      _counter = res;
-    });
+    debugPrint("initState ComponentPageWidgetState");
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ElevatedButton(
-        onPressed: () async {
-          debugPrint("dio---->123456");
-          _updateRep("加载中...");
-          Response response;
-          response = await Dio().get("https://api.dogeshuma.ink/");
-          _updateRep(response.data.toString());
-          debugPrint("message--->$_counter");
-        },
-        child: Text(
-          '发送网络请求--->$_counter',
-          // style: Theme.of(context).textTheme.overline,
-        ),
+      backgroundColor: const Color(0xFFF1F4FA),
+      body: Column(
+        children: [
+          Stack(
+            clipBehavior: Clip.hardEdge,
+            children: [
+              SizedBox(
+                child: Image.asset(
+                  'assets/images/ic_component_bg.png',
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Column(
+                children: const [
+                  TabBarWithPageView()
+                ],
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

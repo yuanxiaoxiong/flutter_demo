@@ -17,7 +17,7 @@ class SplashWidget extends StatefulWidget {
 class _SplashWidgetState extends State<SplashWidget> {
   var container = const ContainerPage();
 
-  bool showAd = true;
+  bool showAd = false;
 
   @override
   void initState() {
@@ -37,7 +37,7 @@ class _SplashWidgetState extends State<SplashWidget> {
         Offstage(
           offstage: !showAd,
           child: Container(
-            color: Colors.blue,
+            color: Colors.white,
             width: ScreenUtils.screenW(context),
             height: ScreenUtils.screenH(context),
             child: Stack(

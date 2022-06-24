@@ -11,10 +11,10 @@ class _TemplatePageState extends State<TemplatePageWidget> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Color(0xFFF1F4FA),
       body: Center(child: Text("模板")),
     );
   }
-
 
   @override
   void initState() {

@@ -24,7 +24,9 @@ class MyApp extends StatelessWidget {
     return RestartWidget(
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            theme: ThemeData(backgroundColor: Colors.white),
+            theme: ThemeData(
+              backgroundColor: const Color(0xFFF1F4FA),
+            ),
             home: const Scaffold(
               body: SplashWidget(),
             )));

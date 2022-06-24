@@ -67,6 +67,11 @@ flutter:
     - assets/images/
     - mock/
 
+  fonts:
+    - family: maobi
+      fonts:
+        - asset: assets/fonts/maobi.ttf
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

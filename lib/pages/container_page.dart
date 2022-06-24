@@ -23,7 +23,7 @@ class _Item {
 class _ContainerPageState extends State<ContainerPage> {
   late List<Widget> pages;
 
-  final defaultItemColor = const Color(0xfff5f5f6);
+  final defaultItemColor = Colors.white;
 
   final itemNames = [
     _Item('组件', 'assets/images/ic_tab_component_active.png',

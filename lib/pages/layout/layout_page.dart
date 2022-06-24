@@ -11,8 +11,16 @@ class _LayoutPageState extends State<LayoutPageWidget> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Color(0xFFF1F4FA),
       body: Center(
-        child: Text("布局"),
+        child: Text(
+          "布局",
+          style: TextStyle(
+              fontFamily: "maobi",
+              fontSize: 42,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.normal),
+        ),
       ),
     );
   }
