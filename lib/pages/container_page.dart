@@ -87,6 +87,7 @@ class _ContainerPageState extends State<ContainerPage> {
     debugPrint('build _ContainerPageState');
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: Text(_selectName),
       ),
       body: Stack(
